@@ -26,6 +26,7 @@ A wrapper based on Laravel for OpenAi Assistants. It is quite light weight
 <code>php artisan migrate</code>
 
 ### Other componenets to update
+<p>You need to update the below fileds in your .env file</p>
 <code>
 OPEN_AI= (this is your OpenAI Key)
 OPEN_AI_ASSISTANT= (This is your assistant key, you need to create an assitant in APIs of OpenAI)
