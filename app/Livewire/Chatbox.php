@@ -42,7 +42,7 @@ class Chatbox extends Component
             'Content-Type' => ' application/json',
             'Authorization' => "Bearer " . env('OPEN_AI') . "",
             "OpenAI-Beta" => "assistants=v1",
-        ])->post("https://api.openai.com/v1/threads/" . $this->thread . "/runs", ["assistant_id" => "asst_3zYVhQaOyFPlyjburVbttjUo"]);
+        ])->post("https://api.openai.com/v1/threads/" . $this->thread . "/runs", ["assistant_id" => env('OPEN_AI_ASSISTANT')]);
         $res = json_decode($response);
         $this->status = $res->status;
         $this->run_id = $res->id;
